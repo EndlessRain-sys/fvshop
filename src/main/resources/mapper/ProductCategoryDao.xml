@@ -4,8 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hdw.fvshop.dao.ProductCategoryDao">
 	<!-- 目的：为dao接口方法提供sql语句配置 -->
-	<select id="queryProductCategoryList" resultType="com.hdw.fvshop.entity.ProductCategory"
-		parameterType="Long">
+	<select id="queryProductCategoryList" resultType="com.hdw.fvshop.entity.ProductCategory" parameterType="Long">
 		<!-- 具体的sql -->
 		SELECT
 		product_category_id,
@@ -22,8 +21,7 @@
 	</select>
 	<insert id="batchInsertProductCategory" parameterType="java.util.List">
 		INSERT INTO
-		fv_product_category(product_category_name, priority,
-		create_time, shop_id)
+		fv_product_category(product_category_name, priority, create_time, shop_id)
 		VALUES
 		<foreach collection="list" item="productCategory" index="index"
 			separator=",">

@@ -6,7 +6,7 @@ $(function() {
 	function getList() {
 		$.getJSON(listUrl, function(data) {
 				if (data.success) {
-					var dataList = data.data;
+					var dataList = data.productCategoryList;
 					$('.category-wrap').html('');
 					var tempHtml = '';
 					dataList.map(function(item, index) {
@@ -56,7 +56,7 @@ $(function() {
 					$.toast('提交成功！');
 					getList();
 				} else {
-					$.toast('提交失败！');
+					$.toast('提交失败！' + data.errMsg);
 				}
 			}
 		});
