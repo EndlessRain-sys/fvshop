@@ -66,7 +66,9 @@ public class ProductManagementController {
             String productStr = HttpServletRequestUtil.getString(request, "productStr");
             product = mapper.readValue(productStr, Product.class);
         } catch (Exception e) {
-            //TODO
+            modelMap.put("success", false);
+            modelMap.put("errMsg", e.toString());
+            return modelMap;
         }
         if (product != null && thumbnail != null && productImgList != null){
             try {
@@ -82,6 +84,7 @@ public class ProductManagementController {
             } catch (Exception e) {
                 modelMap.put("success", false);
                 modelMap.put("errMsg", e.toString());
+                return modelMap;
             }
         } else {
             modelMap.put("success", false);
