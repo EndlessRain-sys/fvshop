@@ -17,7 +17,7 @@ public class Product {
     // 商品简介
     private String productDesc;
     // 简略图
-    private String imgAddr;
+    private String thumbnailAddr;
     // 原价
     private String normalPrice;
     // 现价(推广价格)
@@ -62,12 +62,12 @@ public class Product {
         this.productDesc = productDesc;
     }
 
-    public String getImgAddr() {
-        return imgAddr;
+    public String getThumbnailAddr() {
+        return thumbnailAddr;
     }
 
-    public void setImgAddr(String imgAddr) {
-        this.imgAddr = imgAddr;
+    public void setThumbnailAddr(String thumbnailAddr) {
+        this.thumbnailAddr = thumbnailAddr;
     }
 
     public String getNormalPrice() {

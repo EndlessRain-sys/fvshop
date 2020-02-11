@@ -70,15 +70,15 @@ public class ImageUtil {
 	/**
 	 * 处理详情图，并返回新生成图片的相对值路径
 	 * 
-	 * @param thumbnail
+	 * @param productImg
 	 * @param targetAddr
 	 * @return
 	 */
-	public static String generateNormalImg(ImageHolder thumbnail, String targetAddr) {
+	public static String generateNormalImg(ImageHolder productImg, String targetAddr) {
 		// 获取不重复的随机名
 		String realFileName = getRandomFileName();
 		// 获取文件的扩展名如png,jpg等
-		String extension = getFileExtension(thumbnail.getImageName());
+		String extension = getFileExtension(productImg.getImageName());
 		// 如果目标路径不存在，则自动创建
 		makeDirPath(targetAddr);
 		// 获取文件存储的相对路径(带文件名)
@@ -87,7 +87,7 @@ public class ImageUtil {
 		File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
 		// 调用Thumbnails生成带有水印的图片
 		try {
-			Thumbnails.of(thumbnail.getImage()).size(337, 640)
+			Thumbnails.of(productImg.getImage()).size(337, 640)
 					.watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.25f)
 					.outputQuality(0.9f).toFile(dest);
 		} catch (IOException e) {
