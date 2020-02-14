@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface ProductDao {
     List<Product> queryProductList(@Param("productCondition") Product productCondition, @Param("rowIndex") int rowIndex,
-                                   @Param("rowPage") int rowPage);
-    int queryProductCount(Product productCondition);
+                                   @Param("pageSize") int pageSize);
+    int queryProductCount(@Param("productCondition") Product productCondition);
     Product queryProductById(long productId);
     int insertProduct(Product product);
     int updateProduct(Product product);

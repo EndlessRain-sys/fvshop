@@ -64,10 +64,8 @@ $(function() {
 	}
 	// 将class为product-wrap里面的a标签绑定上点击的事件
 	$('.product-wrap')
-			.on(
-					'click',
-					'a',
-					function(e) {
+			.on('click','a',
+				function(e) {
 						var target = $(e.currentTarget);
 						if (target.hasClass('edit')) {
 							// 如果有class edit则点击就进入店铺信息编辑页面，并带有productId参数

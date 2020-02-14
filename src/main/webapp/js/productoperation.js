@@ -57,7 +57,7 @@ $(function() {
 	function getCategory() {
 		$.getJSON(categoryUrl, function(data) {
 			if (data.success) {
-				var productCategoryList = data.data;
+				var productCategoryList = data.productCategoryList;
 				var optionHtml = '';
 				productCategoryList.map(function(item, index) {
 					optionHtml += '<option data-value="'
@@ -134,7 +134,7 @@ $(function() {
 							$.toast('提交成功！');
 							$('#captcha_img').click();
 						} else {
-							$.toast('提交失败！');
+							$.toast('提交失败！' + data.errMsg);
 							$('#captcha_img').click();
 						}
 					}

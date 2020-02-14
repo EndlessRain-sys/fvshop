@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hdw.fvshop.ProductImgDao">
+<mapper namespace="com.hdw.fvshop.dao.ProductImgDao">
 	<select id="queryProductImgList" resultType="com.hdw.fvshop.entity.ProductImg">
 		SELECT
 		product_img_id,
@@ -24,7 +24,7 @@
 		<foreach collection="list" item="productImg" index="index"
 			separator=",">
 			(
-			#{productImg.thumbnailAddr},
+			#{productImg.imgAddr},
 			#{productImg.imgDesc},
 			#{productImg.priority},
 			#{productImg.createTime},
