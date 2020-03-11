@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fvshop:war2">
+    <output-path>$PROJECT_DIR$/out/artifacts/fvshop_war2</output-path>
+    <root id="archive" name="fvshop_war.war">
+      <element id="artifact" artifact-name="fvshop:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -30,5 +30,6 @@ public interface ShopDao {
     Shop queryByShopId(@Param("shopId") long shopId);
 
     int insertShop(Shop shop);
+
     int updateShop(Shop shop);
 }

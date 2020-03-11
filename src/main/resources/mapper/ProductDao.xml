@@ -136,8 +136,8 @@
 		useGeneratedKeys="true" keyProperty="productId" keyColumn="product_id">
 		INSERT INTO
 		fv_product(product_name,product_desc,img_addr,
-		normal_price,promotion_price,priority,create_time,
 		last_edit_time,enable_status,product_category_id,
+		normal_price,promotion_price,priority,create_time,
 		shop_id)
 		VALUES
 		(#{productName},#{productDesc},#{thumbnailAddr},
@@ -171,8 +171,7 @@
 		fv_product
 		SET
 		product_category_id = null
-		WHERE product_category_id =
-		#{productCategoryId}
+		WHERE product_category_id = #{productCategoryId}
 	</update>
 	<delete id="deleteProduct">
 		DELETE FROM

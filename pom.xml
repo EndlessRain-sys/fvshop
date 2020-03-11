@@ -5,7 +5,7 @@
   <artifactId>fvshop</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>o2o Maven Webapp</name>
+  <name>fvshop Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <spring.version>5.1.8.RELEASE</spring.version>
@@ -144,7 +144,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>o2o</finalName>
+    <finalName>fvshop</finalName>
     <plugins>
       <plugin>
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->

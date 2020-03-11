@@ -126,6 +126,7 @@ public class ShopManagementController {
         }catch (Exception e){
             modelMap.put("success", false);
             modelMap.put("errorMsg", e.toString());
+            return modelMap;
         }
         CommonsMultipartFile shopImg = null;
         CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());

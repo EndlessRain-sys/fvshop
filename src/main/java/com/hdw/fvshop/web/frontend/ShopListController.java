@@ -31,7 +31,7 @@ public class ShopListController {
     @Autowired
     private AreaService areaService;
 
-    @RequestMapping(value = "listshoppageinfo", method = RequestMethod.GET)
+    @RequestMapping(value = "listshopspageinfo", method = RequestMethod.GET)
     @ResponseBody
     Map<String, Object> listShopPageInfo(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
